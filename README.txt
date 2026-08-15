@@ -1,10 +1,17 @@
-김집사 홈케어 최종 홈페이지
-- fixed-design.png: 현재 확정 디자인을 이미지 그대로 고정
-- index.html: 홈페이지
-- admin.html: 사진/영상/글/링크 관리자
-- content.json: 관리자 데이터
+김집사 홈케어 홈페이지
 
-GitHub 저장소 최상위에 이 4개를 올리면 됩니다.
-청소과정 원형 1~6을 누르면 등록한 짧은 영상이 재생됩니다.
-관리자 페이지에서는 작업 사진/영상, 글, 카카오톡/쿠팡플레이스/YouTube/Instagram 주소를 바꿀 수 있습니다.
-실제 GitHub 저장을 위해서는 저장소 Contents Read/Write 권한의 Fine-grained Personal Access Token이 필요합니다.
+파일 구성
+- index.html : 고객용 홈페이지
+- admin.html : 휴대폰 관리자 페이지
+- content.json : 사진/영상/글/링크 목록
+- fixed-design.png : 고정 메인 디자인
+
+관리자 사용법
+1. 홈페이지 맨 아래 '관리자 페이지'를 누릅니다.
+2. 처음 한 번만 GitHub Fine-grained Personal Access Token(연결키)을 입력해 '이 휴대폰에 연결하기'를 누릅니다.
+3. 이후 같은 휴대폰/브라우저에서는 GitHub에 들어가지 않고 관리자 페이지에서 사진, 영상, 글을 바로 올립니다.
+4. 공용 기기에서는 '이 휴대폰 연결 해제'를 누릅니다.
+
+중요
+- 연결키는 홈페이지 파일에 저장되지 않고 해당 휴대폰 브라우저의 localStorage에만 저장됩니다.
+- 토큰은 kimhyosang86/Kimjipsahomecare 저장소 하나만 선택하고 Contents: Read and write 권한만 주는 Fine-grained token을 권장합니다.
