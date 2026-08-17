@@ -1,44 +1,57 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>노력하는 김집사 홈케어</title>
+<meta name="description" content="매트리스·소파·카시트·패브릭 의자 전문 청소. 실제 전후사진과 작업영상, 가격을 확인하고 사진으로 간편 견적을 받아보세요.">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans KR",sans-serif;color:#1b150f;background:#fff}
-.wrap{max-width:1400px;margin:auto}.fixed{position:relative}.fixed img{display:block;width:100%;height:auto}
-.hot{position:absolute;z-index:5;border:0;background:transparent;cursor:pointer}
+:root{--y:#ffbf00;--ink:#20170f;--cream:#fffaf0;--line:#eadfce;--muted:#756b61;--green:#08723b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans KR",sans-serif;color:var(--ink);background:#fff}.wrap{max-width:1400px;margin:auto}.fixed{position:relative}.fixed img{display:block;width:100%;height:auto}.hot{position:absolute;z-index:5;border:0;background:transparent;cursor:pointer}.navhot{position:absolute;z-index:8;top:.4%;height:4.1%;display:block;background:transparent;border:0;cursor:pointer}.p{border-radius:999px}.p:hover,.hot:hover,.navhot:hover{outline:3px solid rgba(255,191,0,.55)}
 #phone{left:76.5%;top:1%;width:12.5%;height:3.4%}#kakao{left:89.2%;top:1%;width:10.3%;height:3.4%}
-.p{border-radius:999px}.p:hover,.hot:hover{outline:3px solid rgba(255,191,0,.55)}
-#p1{left:4%;top:55.5%;width:11.5%;height:12.6%}#p2{left:19%;top:55.5%;width:11.5%;height:12.6%}
-#p3{left:34.7%;top:55.5%;width:11.5%;height:12.6%}#p4{left:50.8%;top:55.5%;width:11.5%;height:12.6%}
-#p5{left:66.6%;top:55.5%;width:11.5%;height:12.6%}#p6{left:82.3%;top:55.5%;width:11.5%;height:12.6%}
-.dock{position:sticky;bottom:8px;z-index:30;display:flex;gap:8px;justify-content:center;padding:8px}
-.dock a{background:#fff;border:1px solid #ddd;border-radius:999px;padding:11px 14px;font-weight:800;box-shadow:0 3px 16px #0002}
-.dock a.y{background:#ffbf00}.dynamic{max-width:1180px;margin:auto;padding:22px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.card{border:1px solid #eadfce;border-radius:16px;padding:12px;background:#fff}.card img,.card video{width:100%;border-radius:12px}.txt{white-space:pre-wrap;line-height:1.55}
-.empty{padding:20px;border:1px dashed #bbb;border-radius:14px;color:#777}.admin{text-align:center;padding:24px}
-.modal{display:none;position:fixed;inset:0;background:#000b;z-index:100;align-items:center;justify-content:center;padding:18px}.modal.on{display:flex}
-.modal>div{background:#111;padding:12px;border-radius:16px;width:min(900px,96vw);position:relative}.modal video{width:100%;max-height:80vh}
-.close{position:absolute;right:14px;top:14px;width:42px;height:42px;border-radius:50%;border:0;font-size:24px}
-@media(max-width:700px){.dock{justify-content:flex-start;overflow:auto}.dock a{white-space:nowrap;font-size:13px}.dynamic{padding:14px}}
+#navHome{left:32.5%;width:4.2%}#navService{left:36.8%;width:8.2%}#navProcess{left:45.2%;width:8.2%}#navPrice{left:53.5%;width:6.4%}#navBefore{left:59.9%;width:8%}#navReview{left:67.8%;width:5.4%}#navContact{left:73.1%;width:4.8%}
+#p1{left:4%;top:55.5%;width:11.5%;height:12.6%}#p2{left:19%;top:55.5%;width:11.5%;height:12.6%}#p3{left:34.7%;top:55.5%;width:11.5%;height:12.6%}#p4{left:50.8%;top:55.5%;width:11.5%;height:12.6%}#p5{left:66.6%;top:55.5%;width:11.5%;height:12.6%}#p6{left:82.3%;top:55.5%;width:11.5%;height:12.6%}
+section.block{max-width:1180px;margin:auto;padding:54px 22px;scroll-margin-top:16px}.soft{background:var(--cream);max-width:none}.soft>.inner{max-width:1180px;margin:auto}.eyebrow{font-weight:900;color:#8b6500}.title{font-size:clamp(28px,5vw,46px);margin:8px 0 12px}.lead{font-size:18px;color:var(--muted);line-height:1.65;margin:0 0 24px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{border:1px solid var(--line);border-radius:20px;padding:18px;background:#fff;box-shadow:0 6px 22px #3d2d170c}.card h3{margin:8px 0}.icon{font-size:34px}.tag{display:inline-block;background:#fff1b8;border-radius:999px;padding:6px 10px;font-weight:800;font-size:13px}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:var(--ink);border-radius:999px;padding:14px 18px;font-weight:900;border:1px solid #d8c9b2;background:#fff}.btn.primary{background:var(--y);border-color:var(--y)}.cta{display:flex;gap:10px;flex-wrap:wrap}.quote{border:2px solid var(--y);background:#fff9dc;padding:26px;border-radius:24px}.quote h2{margin-top:0}.process{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{cursor:pointer;position:relative}.step small{color:var(--muted)}.step b{display:block;font-size:20px;margin-top:6px}.step:after{content:'▶ 영상보기';display:inline-block;margin-top:14px;font-weight:900;color:#8a6500}.prices{display:grid;grid-template-columns:1fr 1fr;gap:16px}.pricebox{border:1px solid var(--line);border-radius:22px;padding:20px}.pricebox h3{font-size:24px;margin-top:0}.price{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px dashed #ddd}.price:last-child{border-bottom:0}.price strong{font-size:20px}.tabs{display:flex;gap:8px;overflow:auto;margin:0 0 18px}.tab{border:1px solid #d8c9b2;background:#fff;padding:9px 13px;border-radius:999px;white-space:nowrap;font-weight:800;cursor:pointer}.tab.on{background:var(--y);border-color:var(--y)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.media{overflow:hidden;padding:0}.media img,.media video{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}.media .pad{padding:14px}.ba{display:grid;grid-template-columns:1fr 1fr;gap:6px}.ba>div{position:relative}.ba span{position:absolute;left:8px;top:8px;background:#000b;color:#fff;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:900}.empty{padding:20px;border:1px dashed #bbb;border-radius:14px;color:#777}.dock{position:sticky;bottom:8px;z-index:30;display:flex;gap:8px;justify-content:center;padding:8px}.dock a{background:#fff;border:1px solid #ddd;border-radius:999px;padding:12px 15px;font-weight:900;box-shadow:0 3px 16px #0002;text-decoration:none;color:var(--ink);white-space:nowrap}.dock a.y{background:var(--y)}.dock a.photo{background:#1f7a49;color:#fff;border-color:#1f7a49}.links{display:flex;gap:10px;flex-wrap:wrap}.admin{text-align:center;padding:28px}.admin a{color:#888}.modal{display:none;position:fixed;inset:0;background:#000b;z-index:100;align-items:center;justify-content:center;padding:18px}.modal.on{display:flex}.modal>div{background:#111;padding:12px;border-radius:16px;width:min(900px,96vw);position:relative}.modal video{width:100%;max-height:80vh}.close{position:absolute;right:14px;top:14px;width:42px;height:42px;border-radius:50%;border:0;font-size:24px;z-index:2}
+@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.prices{grid-template-columns:1fr}.dock{justify-content:flex-start;overflow:auto}.links .btn{flex:1}.block{padding:40px 15px!important}}
+@media(max-width:520px){.grid,.process{grid-template-columns:1fr}.lead{font-size:16px}.dock a{font-size:13px;padding:11px 13px}}
 </style></head><body><div class="wrap">
-<div class="fixed"><img src="fixed-design.png" alt="노력하는 김집사 홈케어 고정 디자인">
-<a id="phone" class="hot" href="tel:01033857516" aria-label="전화상담"></a>
-<a id="kakao" class="hot" href="#" target="_blank" aria-label="카카오톡상담"></a>
-<button id="p1" class="hot p"></button><button id="p2" class="hot p"></button><button id="p3" class="hot p"></button>
-<button id="p4" class="hot p"></button><button id="p5" class="hot p"></button><button id="p6" class="hot p"></button>
-</div>
-<div class="dock"><a class="y" id="dphone" href="tel:01033857516">☎ 전화</a><a class="y" id="dkakao" href="#">TALK 카카오톡</a><a id="dcoupang" href="#">쿠팡플레이스</a><a id="dyoutube" href="#">YouTube</a><a id="dinstagram" href="#">Instagram</a></div>
-<section class="dynamic"><h2>📸 새 작업 사진 · 영상</h2><div id="gallery" class="cards"></div><h2>✍️ 새 소식</h2><div id="posts" class="cards"></div></section>
+<div class="fixed" id="home"><img src="fixed-design.png" alt="노력하는 김집사 홈케어">
+<a id="phone" class="hot" href="tel:01033857516" aria-label="전화상담"></a><a id="kakao" class="hot" href="#" aria-label="카카오톡상담"></a>
+<button id="navHome" class="navhot" aria-label="홈"></button><button id="navService" class="navhot" aria-label="서비스 안내"></button><button id="navProcess" class="navhot" aria-label="청소 과정"></button><button id="navPrice" class="navhot" aria-label="가격표"></button><button id="navBefore" class="navhot" aria-label="작업사진"></button><button id="navReview" class="navhot" aria-label="후기"></button><button id="navContact" class="navhot" aria-label="문의"></button>
+<button id="p1" class="hot p" aria-label="오염확인 영상"></button><button id="p2" class="hot p" aria-label="전문장비 영상"></button><button id="p3" class="hot p" aria-label="친환경 세제 영상"></button><button id="p4" class="hot p" aria-label="얼룩제거 영상"></button><button id="p5" class="hot p" aria-label="고온살균 영상"></button><button id="p6" class="hot p" aria-label="건조 영상"></button></div>
+
+<section id="service" class="block"><div class="eyebrow">SERVICE</div><h2 class="title">무엇을 청소하나요?</h2><p class="lead">매트리스부터 소파, 카시트, 패브릭 의자까지. 고객이 필요한 서비스를 바로 확인할 수 있게 정리했습니다.</p><div class="grid">
+<div class="card"><div class="icon">🛏️</div><h3>매트리스 청소</h3><p>싱글·퀸·킹 매트리스의 먼지와 생활 오염을 상태에 맞춰 작업합니다.</p></div>
+<div class="card"><div class="icon">🛋️</div><h3>소파 청소</h3><p>3인·4인·6인 소파 등 패브릭 소재를 확인한 뒤 맞춤 방식으로 작업합니다.</p></div>
+<div class="card"><div class="icon">🚗</div><h3>카시트 청소</h3><p>차량 시트의 생활 얼룩과 오염을 확인하고 세척합니다.</p></div>
+<div class="card"><div class="icon">🪑</div><h3>패브릭 의자</h3><p>식탁의자와 패브릭 가구도 오염 상태를 확인해 상담합니다.</p></div></div></section>
+
+<section class="soft"><div class="inner"><section class="block"><div class="quote"><div class="eyebrow">PHOTO QUOTE</div><h2 class="title">“이 얼룩도 될까요?” 사진으로 먼저 물어보세요</h2><p class="lead">오염 부위를 찍어 카카오톡으로 보내주시면 제품 종류와 오염 상태를 보고 상담하기 편합니다.</p><div class="cta"><a id="photoQuote" class="btn primary" href="#">📷 오염 사진 보내고 견적받기</a><a class="btn" href="tel:01033857516">☎ 전화로 물어보기</a></div></div></section></div></section>
+
+<section id="process" class="block"><div class="eyebrow">PROCESS</div><h2 class="title">실제 청소과정, 눌러서 영상으로 확인</h2><p class="lead">각 단계를 누르면 등록된 짧은 작업영상이 바로 재생됩니다.</p><div class="process" id="processCards"></div></section>
+
+<section id="price" class="soft"><div class="inner"><section class="block"><div class="eyebrow">PRICE</div><h2 class="title">가격을 미리 확인하세요</h2><p class="lead">기본 가격을 공개하고, 심한 오염이나 특수 소재 등 추가 작업이 필요한 경우는 작업 전 먼저 안내하는 방식이 좋습니다.</p><div class="prices"><div class="pricebox"><h3>🛏️ 매트리스</h3><div class="price"><span>싱글</span><strong>7.9만원</strong></div><div class="price"><span>퀸</span><strong>9.9만원</strong></div><div class="price"><span>킹</span><strong>10.9만원</strong></div></div><div class="pricebox"><h3>🛋️ 소파</h3><div class="price"><span>3인</span><strong>9.9만원</strong></div><div class="price"><span>4인</span><strong>11.9만원</strong></div><div class="price"><span>6인</span><strong>13.9만원</strong></div></div></div></section></div></section>
+
+<section id="before" class="block"><div class="eyebrow">BEFORE & AFTER</div><h2 class="title">실제 작업 전·후 사진</h2><p class="lead">말보다 결과를 먼저 보여드립니다. 사람 소변, 반려동물 소변, 커피·음료, 음식물, 볼펜 자국 등 오염 종류별 작업사례를 모아볼 수 있습니다.</p><div class="tabs" id="tabs"><button class="tab on" data-cat="전체">전체</button><button class="tab" data-cat="사람 소변">사람 소변</button><button class="tab" data-cat="반려동물 소변">반려동물 소변</button><button class="tab" data-cat="커피·음료">커피·음료</button><button class="tab" data-cat="음식물">음식물</button><button class="tab" data-cat="볼펜 자국">볼펜 자국</button></div><div id="cases" class="cards"></div></section>
+
+<section class="soft"><div class="inner"><section class="block"><div class="eyebrow">TODAY'S WORK</div><h2 class="title">오늘의 작업</h2><p class="lead">지역 + 제품 + 오염 종류가 보이는 실제 작업사례를 계속 쌓아갈 수 있습니다.</p><div id="gallery" class="cards"></div></section></div></section>
+
+<section id="review" class="block"><div class="eyebrow">REVIEW & NEWS</div><h2 class="title">후기 · 새 소식</h2><div id="posts" class="cards"></div></section>
+
+<section id="contact" class="soft"><div class="inner"><section class="block"><div class="eyebrow">CONTACT</div><h2 class="title">바로 상담하세요</h2><p class="lead">전화, 카카오톡, 사진견적 중 편한 방법으로 연락하세요.</p><div class="links"><a class="btn primary" href="tel:01033857516">☎ 010-3385-7516</a><a id="contactKakao" class="btn" href="#">💬 카카오톡 상담</a><a id="contactPhoto" class="btn" href="#">📷 사진견적</a></div><div class="links" style="margin-top:14px"><a id="dcoupang" class="btn" href="#">쿠팡플레이스</a><a id="dyoutube" class="btn" href="#">YouTube</a><a id="dinstagram" class="btn" href="#">Instagram</a></div></section></div></section>
+
+<div class="dock"><a class="y" id="dphone" href="tel:01033857516">☎ 전화상담</a><a class="y" id="dkakao" href="#">💬 카톡상담</a><a class="photo" id="dphoto" href="#">📷 사진견적</a></div>
 <div class="admin"><a href="admin.html">관리자 페이지</a></div></div>
 <div class="modal" id="modal"><div><button class="close" onclick="closeV()">×</button><video id="mv" controls playsinline></video></div></div>
 <script>
-let D={};const q=s=>document.querySelector(s);const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+let D={};const q=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const processNames=['오염확인','전문장비 청소','친환경 세제 분사','얼룩 제거','고온 살균','자연 건조'];
 async function load(){try{D=await fetch('content.json?'+Date.now()).then(r=>r.json())}catch(e){D={}}
-if(D.phone){q('#phone').href=q('#dphone').href='tel:'+D.phone.replace(/\D/g,'')}
-for(const [id,k] of [['#kakao','kakao'],['#dkakao','kakao'],['#dcoupang','coupang_place'],['#dyoutube','youtube'],['#dinstagram','instagram']])q(id).href=D[k]||'#';
-render()}
-function render(){let g=D.gallery||[];q('#gallery').innerHTML=g.length?g.map(x=>`<article class="card">${x.type==='video'?`<video src="${x.url}" controls playsinline></video>`:`<img src="${x.url}">`}<div class="txt">${esc(x.caption||'')}</div></article>`).join(''):'<div class="empty">관리자 페이지에서 사진이나 영상을 올리면 여기에 표시됩니다.</div>';
-let p=D.posts||[];q('#posts').innerHTML=p.length?p.map(x=>`<article class="card"><b>${esc(x.title||'')}</b><div class="txt">${esc(x.body||'')}</div></article>`).join(''):'<div class="empty">관리자 페이지에서 글을 작성하면 여기에 표시됩니다.</div>'}
-for(let i=0;i<6;i++)document.getElementById('p'+(i+1)).onclick=()=>openV(i);
-function openV(i){let u=(D.process_videos||[])[i];if(!u){alert('관리자 페이지에서 이 청소과정 영상을 먼저 등록해주세요.');return}q('#mv').src=u;q('#modal').classList.add('on');q('#mv').play().catch(()=>{})}
-function closeV(){q('#mv').pause();q('#mv').src='';q('#modal').classList.remove('on')}q('#modal').onclick=e=>{if(e.target.id==='modal')closeV()};load();
+if(D.phone){const tel='tel:'+D.phone.replace(/\D/g,'');q('#phone').href=q('#dphone').href=tel}
+for(const id of ['#kakao','#dkakao','#photoQuote','#contactKakao','#contactPhoto','#dphoto']) q(id).href=D.kakao||'#';
+for(const [id,k] of [['#dcoupang','coupang_place'],['#dyoutube','youtube'],['#dinstagram','instagram']])q(id).href=D[k]||'#';render()}
+function render(){q('#processCards').innerHTML=processNames.map((n,i)=>`<article class="card step" onclick="openV(${i})"><span class="tag">0${i+1}</span><b>${n}</b><small>${(D.process_videos||[])[i]?'등록된 실제 영상이 있습니다.':'영상 등록 준비중입니다.'}</small></article>`).join('');renderCases('전체');
+let g=D.gallery||[];q('#gallery').innerHTML=g.length?g.map(x=>`<article class="card media">${x.type==='video'?`<video src="${x.url}" controls playsinline></video>`:`<img src="${x.url}" alt="작업사례">`}<div class="pad"><b>${esc(x.title||'실제 작업사례')}</b><div>${esc(x.caption||'')}</div></div></article>`).join(''):'<div class="empty">관리자 페이지에서 실제 작업 사진이나 영상을 올리면 여기에 표시됩니다.</div>';
+let p=D.posts||[];q('#posts').innerHTML=p.length?p.map(x=>`<article class="card"><span class="tag">${esc(x.kind||'새 소식')}</span><h3>${esc(x.title||'')}</h3><div>${esc(x.body||'')}</div></article>`).join(''):'<div class="empty">관리자 페이지에서 고객 후기나 새 소식을 올리면 여기에 표시됩니다.</div>'}
+function renderCases(cat){let c=(D.cases||[]).filter(x=>cat==='전체'||x.category===cat);q('#cases').innerHTML=c.length?c.map(x=>`<article class="card media"><div class="ba"><div><img src="${x.before}" alt="청소 전"><span>BEFORE</span></div><div><img src="${x.after}" alt="청소 후"><span>AFTER</span></div></div><div class="pad"><span class="tag">${esc(x.category||'작업사례')}</span><h3>${esc(x.title||'')}</h3><div>${esc(x.note||'')}</div></div></article>`).join(''):'<div class="empty">이 분류의 전·후 사진이 아직 없습니다. 관리자 페이지에서 실제 사진을 추가할 수 있습니다.</div>'}
+q('#tabs').onclick=e=>{if(!e.target.matches('.tab'))return;document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));e.target.classList.add('on');renderCases(e.target.dataset.cat)};
+const navMap={navHome:'home',navService:'service',navProcess:'process',navPrice:'price',navBefore:'before',navReview:'review',navContact:'contact'};for(const [btn,target] of Object.entries(navMap))document.getElementById(btn).onclick=()=>document.getElementById(target).scrollIntoView({behavior:'smooth',block:'start'});for(let i=0;i<6;i++)document.getElementById('p'+(i+1)).onclick=()=>openV(i);
+function openV(i){let u=(D.process_videos||[])[i];if(!u){alert('이 청소과정 영상은 아직 등록되지 않았습니다.');return}q('#mv').src=u;q('#modal').classList.add('on');q('#mv').play().catch(()=>{})}function closeV(){q('#mv').pause();q('#mv').src='';q('#modal').classList.remove('on')}q('#modal').onclick=e=>{if(e.target.id==='modal')closeV()};load();
 </script></body></html>

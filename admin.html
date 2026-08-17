@@ -1,72 +1,17 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>김집사 홈케어 관리자</title>
-<style>
-*{box-sizing:border-box}body{margin:0;background:#f7f4ee;font-family:Arial,"Noto Sans KR",sans-serif;color:#222}main{max-width:760px;margin:auto;padding:16px}.top{display:flex;align-items:center;justify-content:space-between;gap:10px}.box{background:#fff;border:1px solid #e1ddd4;border-radius:18px;padding:16px;margin:14px 0;box-shadow:0 4px 14px #0000000a}h1{font-size:25px;margin:8px 0}h2{font-size:20px;margin:4px 0 12px}label{display:block;font-weight:800;margin:12px 0 6px}input,textarea,select,button{width:100%;padding:13px;border:1px solid #ccc;border-radius:12px;font:inherit}textarea{min-height:110px;resize:vertical}button{background:#ffbf00;border:0;font-weight:900;margin-top:10px;cursor:pointer}.secondary{background:#eee}.danger{background:#fff;border:1px solid #d66;color:#a22}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ok{color:#08723b;font-weight:800}.err{color:#b33;font-weight:800}.note{font-size:13px;color:#666;line-height:1.5}.status{background:#fff8d9;border-radius:12px;padding:12px;margin:10px 0}.preview{max-width:100%;max-height:240px;border-radius:12px;margin-top:10px;display:none}.back{display:inline-block;text-decoration:none;color:#222;font-weight:800;padding:10px 0}.hidden{display:none}.connected{display:inline-block;background:#e7f7ed;color:#08723b;border-radius:999px;padding:6px 10px;font-weight:800;font-size:13px}@media(max-width:650px){.row{grid-template-columns:1fr}}
-</style></head><body><main>
-<div class="top"><h1>🐾 김집사 홈케어 관리자</h1><span id="badge" class="connected hidden">연결됨</span></div>
-<div id="setup" class="box">
-  <h2>처음 한 번만 연결</h2>
-  <p class="note">이 휴대폰에서 한 번 연결하면 다음부터는 GitHub 화면에 들어가지 않고 여기에서 사진·영상·글을 올릴 수 있습니다. 연결 정보는 이 휴대폰 브라우저에만 저장됩니다.</p>
-  <label>연결키</label><input id="token" type="password" placeholder="github_pat_..." autocomplete="off">
-  <button onclick="connect()">이 휴대폰에 연결하기</button>
-  <div id="setupMsg"></div>
-</div>
-<div id="st" class="status">사진이나 글을 올리면 여기에 결과가 표시됩니다.</div>
-
-<div class="box"><h2>📸 전후사진 · 작업사진 올리기</h2>
-  <label>사진 또는 영상 선택</label><input id="mf" type="file" accept="image/*,video/*" onchange="showPreview()">
-  <img id="imgPrev" class="preview" alt="미리보기">
-  <label>설명</label><textarea id="cap" placeholder="예: 퀸 매트리스 고양이 소변 오염 청소 전후"></textarea>
-  <button onclick="uploadGallery()">홈페이지에 올리기</button>
-</div>
-
-<div class="box"><h2>✍️ 글 쓰기</h2>
-  <label>제목</label><input id="pt" placeholder="예: 오늘 작업 완료">
-  <label>내용</label><textarea id="pb" placeholder="고객에게 보여줄 내용을 적어주세요."></textarea>
-  <button onclick="addPost()">글 올리기</button>
-</div>
-
-<div class="box"><h2>🎬 청소과정 영상 올리기</h2>
-  <label>과정 선택</label><select id="step"><option value="0">1. 오염확인</option><option value="1">2. 전문장비 청소</option><option value="2">3. 친환경 세제 분사</option><option value="3">4. 얼룩 제거</option><option value="4">5. 고온 살균</option><option value="5">6. 자연 건조</option></select>
-  <label>영상 선택</label><input id="pf" type="file" accept="video/*">
-  <button onclick="uploadProcess()">청소과정에 영상 올리기</button>
-</div>
-
-<div class="box"><h2>🔗 상담 · SNS 주소</h2>
-  <div class="row"><div><label>카카오톡</label><input id="kakao"></div><div><label>쿠팡플레이스</label><input id="coupang"></div></div>
-  <div class="row"><div><label>YouTube</label><input id="youtube"></div><div><label>Instagram</label><input id="instagram"></div></div>
-  <button onclick="saveLinks()">주소 저장</button>
-</div>
-
-<div class="box"><h2>⚙️ 연결 관리</h2>
-  <button class="secondary" onclick="showSetup()">연결키 다시 입력</button>
-  <button class="danger" onclick="forgetToken()">이 휴대폰 연결 해제</button>
-  <p class="note">공용 휴대폰에서는 연결을 저장하지 않는 것이 안전합니다. 연결키는 사이트 파일에는 들어가지 않습니다.</p>
-</div>
-<a class="back" href="index.html">← 고객 홈페이지 보기</a>
-</main>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>김집사 홈케어 관리자</title><style>*{box-sizing:border-box}body{margin:0;background:#f7f4ee;font-family:Arial,"Noto Sans KR",sans-serif;color:#241a12}main{max-width:900px;margin:auto;padding:16px}.box{background:#fff;border:1px solid #ddd;border-radius:16px;padding:16px;margin:14px 0}label{display:block;font-weight:800;margin:10px 0 5px}input,textarea,select,button{width:100%;padding:12px;border:1px solid #ccc;border-radius:10px;font:inherit}textarea{min-height:100px}button{background:#ffbf00;border:0;font-weight:900;margin-top:10px;cursor:pointer}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ok{color:#08723b}.err{color:#b33}.hint{color:#766b61;line-height:1.55}.danger{background:#eee}@media(max-width:650px){.row{grid-template-columns:1fr}}</style></head><body><main><h1>🐾 김집사 홈케어 관리자</h1><p class="hint">여기서 사진·영상·전후사진·후기·연결주소를 등록하면 홈페이지에 표시됩니다.</p>
+<div class="box"><b>GitHub 저장소에 직접 저장</b><p class="hint">저장소 <b>kimhyosang86/Kimjipsahomecare</b>에 Contents: Read and write 권한이 있는 Fine-grained Personal Access Token을 입력하세요. 토큰은 이 페이지에 저장하지 않습니다.</p><label>GitHub 토큰</label><input id="token" type="password" placeholder="github_pat_..."><div id="st"></div></div>
+<div class="box"><h2>1. 상담·SNS 연결 주소</h2><div class="row"><div><label>카카오톡 상담 주소</label><input id="kakao" placeholder="https://..."></div><div><label>쿠팡플레이스</label><input id="coupang" placeholder="https://..."></div></div><div class="row"><div><label>YouTube</label><input id="youtube"></div><div><label>Instagram</label><input id="instagram"></div></div><button onclick="saveLinks()">주소 저장</button></div>
+<div class="box"><h2>2. 청소과정 짧은 영상</h2><select id="step"><option value="0">1. 오염확인</option><option value="1">2. 전문장비 청소</option><option value="2">3. 친환경 세제 분사</option><option value="3">4. 얼룩 제거</option><option value="4">5. 고온 살균</option><option value="5">6. 자연 건조</option></select><label>영상 파일</label><input id="pf" type="file" accept="video/*"><button onclick="uploadProcess()">영상 올리기</button></div>
+<div class="box"><h2>3. 전·후 사진 올리기</h2><div class="row"><div><label>청소 전 사진</label><input id="bf" type="file" accept="image/*"></div><div><label>청소 후 사진</label><input id="af" type="file" accept="image/*"></div></div><label>오염 종류</label><select id="cat"><option>사람 소변</option><option>반려동물 소변</option><option>커피·음료</option><option>음식물</option><option>볼펜 자국</option><option>기타</option></select><label>제목</label><input id="ct" placeholder="예: 수원 퀸 매트리스 / 반려동물 소변"><label>설명</label><textarea id="cn" placeholder="작업 전 상태와 결과를 간단히 적어주세요."></textarea><button onclick="uploadCase()">전·후 사진 올리기</button></div>
+<div class="box"><h2>4. 오늘의 작업 사진·영상</h2><input id="mf" type="file" accept="image/*,video/*"><label>제목</label><input id="mt" placeholder="예: 용인 4인 소파 청소"><label>설명</label><textarea id="cap"></textarea><button onclick="uploadGallery()">작업사례 올리기</button></div>
+<div class="box"><h2>5. 후기 · 새 소식</h2><label>종류</label><select id="pk"><option>고객 후기</option><option>새 소식</option></select><label>제목</label><input id="pt"><label>내용</label><textarea id="pb"></textarea><button onclick="addPost()">글 올리기</button></div>
+<div class="box"><a href="index.html">← 홈페이지로 돌아가기</a></div></main>
 <script>
-const OWNER='kimhyosang86',REPO='Kimjipsahomecare',BRANCH='main',KEY='kimjipsa_admin_token';
-let D={phone:'010-3385-7516',kakao:'#',youtube:'#',instagram:'#',coupang_place:'#',process_videos:['','','','','',''],gallery:[],posts:[]};
-const $=id=>document.getElementById(id);
-function msg(s,ok=1){$('st').innerHTML='<span class="'+(ok?'ok':'err')+'">'+s+'</span>'}
-function token(){return localStorage.getItem(KEY)||$('token').value.trim()}
-function H(){let t=token();if(!t)throw Error('처음 한 번 연결해 주세요.');return {'Authorization':'Bearer '+t,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}}
-async function api(path,opt={}){let r=await fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+path,{...opt,headers:{...H(),...(opt.headers||{})}});if(!r.ok){let j={};try{j=await r.json()}catch{};if(r.status===401||r.status===403)throw Error('연결키가 맞지 않거나 권한이 없습니다. 연결키를 다시 확인해 주세요.');throw Error(j.message||'저장 중 오류가 났습니다.')}return r.json()}
-async function connect(){try{let t=$('token').value.trim();if(!t)throw Error('연결키를 입력해 주세요.');localStorage.setItem(KEY,t);await api('content.json');$('setup').classList.add('hidden');$('badge').classList.remove('hidden');$('setupMsg').innerHTML='';msg('연결 완료. 이제 이 휴대폰에서는 바로 올릴 수 있습니다.');await load()}catch(e){localStorage.removeItem(KEY);$('setupMsg').innerHTML='<p class="err">'+e.message+'</p>'}}
-function showSetup(){$('setup').classList.remove('hidden');$('token').value='';window.scrollTo({top:0,behavior:'smooth'})}
-function forgetToken(){localStorage.removeItem(KEY);$('badge').classList.add('hidden');$('setup').classList.remove('hidden');msg('이 휴대폰의 연결을 해제했습니다.');}
-async function old(path){try{let j=await api(path);return j.sha}catch(e){if(String(e).includes('Not Found'))return null;throw e}}
-async function put(path,b64,m){let sha=await old(path),body={message:m,content:b64,branch:BRANCH};if(sha)body.sha=sha;return api(path,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})}
-async function putText(path,text,m){return put(path,btoa(unescape(encodeURIComponent(text))),m)}
-async function putFile(path,f,m){let b64=await new Promise((res,rej)=>{let fr=new FileReader();fr.onload=()=>res(String(fr.result).split(',')[1]);fr.onerror=rej;fr.readAsDataURL(f)});return put(path,b64,m)}
-async function save(m){await putText('content.json',JSON.stringify(D,null,2),m);msg('✅ 저장 완료! 고객 홈페이지에 반영되었습니다.')}
-async function load(){try{D=await fetch('content.json?'+Date.now()).then(r=>r.json());$('kakao').value=D.kakao||'';$('coupang').value=D.coupang_place||'';$('youtube').value=D.youtube||'';$('instagram').value=D.instagram||''}catch(e){}}
-function safeName(n){return n.replace(/[^\w.\-가-힣]/g,'_')}
-function showPreview(){let f=$('mf').files[0],p=$('imgPrev');if(f&&f.type.startsWith('image/')){p.src=URL.createObjectURL(f);p.style.display='block'}else{p.style.display='none'}}
-async function saveLinks(){try{D.kakao=$('kakao').value||'#';D.coupang_place=$('coupang').value||'#';D.youtube=$('youtube').value||'#';D.instagram=$('instagram').value||'#';msg('저장 중...');await save('Update links')}catch(e){msg(e.message,0)}}
-async function uploadProcess(){try{let f=$('pf').files[0];if(!f)throw Error('영상을 선택해 주세요.');msg('영상 올리는 중...');let path='media/process/'+Date.now()+'_'+safeName(f.name);await putFile(path,f,'Upload process video');D.process_videos[+$('step').value]=path;await save('Update process video');$('pf').value=''}catch(e){msg(e.message,0)}}
-async function uploadGallery(){try{let f=$('mf').files[0];if(!f)throw Error('사진 또는 영상을 선택해 주세요.');msg('사진/영상 올리는 중...');let path='media/gallery/'+Date.now()+'_'+safeName(f.name);await putFile(path,f,'Upload gallery media');D.gallery.unshift({type:f.type.startsWith('video')?'video':'image',url:path,caption:$('cap').value});await save('Add gallery item');$('mf').value='';$('cap').value='';$('imgPrev').style.display='none'}catch(e){msg(e.message,0)}}
-async function addPost(){try{let title=$('pt').value.trim(),body=$('pb').value.trim();if(!title&&!body)throw Error('제목이나 내용을 입력해 주세요.');D.posts.unshift({title,body,date:new Date().toISOString()});msg('글 저장 중...');await save('Add post');$('pt').value='';$('pb').value=''}catch(e){msg(e.message,0)}}
-if(localStorage.getItem(KEY)){$('setup').classList.add('hidden');$('badge').classList.remove('hidden')}load();
+const OWNER='kimhyosang86',REPO='Kimjipsahomecare',BRANCH='main';let D={phone:'010-3385-7516',kakao:'#',youtube:'#',instagram:'#',coupang_place:'#',process_videos:['','','','','',''],cases:[],gallery:[],posts:[]};const $=id=>document.getElementById(id);function msg(s,ok=1){$('st').innerHTML='<p class="'+(ok?'ok':'err')+'">'+s+'</p>'}function H(){let t=$('token').value.trim();if(!t)throw Error('GitHub 토큰을 입력해주세요.');return {'Authorization':'Bearer '+t,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}}async function api(path,opt={}){let r=await fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+path,{...opt,headers:{...H(),...(opt.headers||{})}});if(!r.ok)throw Error((await r.json()).message||'GitHub 오류');return r.json()}async function old(path){try{let j=await api(path);return j.sha}catch(e){if(String(e).includes('Not Found'))return null;throw e}}async function put(path,b64,m){let sha=await old(path),body={message:m,content:b64,branch:BRANCH};if(sha)body.sha=sha;return api(path,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})}async function putText(path,text,m){return put(path,btoa(unescape(encodeURIComponent(text))),m)}async function putFile(path,f,m){let b64=await new Promise((res,rej)=>{let fr=new FileReader();fr.onload=()=>res(String(fr.result).split(',')[1]);fr.onerror=rej;fr.readAsDataURL(f)});return put(path,b64,m)}async function save(m){await putText('content.json',JSON.stringify(D,null,2),m);msg('저장 완료. 홈페이지 반영까지 잠시 걸릴 수 있습니다.')}async function load(){try{D=await fetch('content.json?'+Date.now()).then(r=>r.json());D.process_videos=D.process_videos||['','','','','',''];D.cases=D.cases||[];D.gallery=D.gallery||[];D.posts=D.posts||[];$('kakao').value=D.kakao||'';$('coupang').value=D.coupang_place||'';$('youtube').value=D.youtube||'';$('instagram').value=D.instagram||''}catch(e){}}
+async function saveLinks(){try{D.kakao=$('kakao').value||'#';D.coupang_place=$('coupang').value||'#';D.youtube=$('youtube').value||'#';D.instagram=$('instagram').value||'#';await save('Update links')}catch(e){msg(e.message,0)}}
+function clean(n){return n.replace(/[^\w.\-가-힣]/g,'_')}
+async function uploadProcess(){try{let f=$('pf').files[0];if(!f)throw Error('영상을 선택해주세요.');let path='media/process/'+Date.now()+'_'+clean(f.name);await putFile(path,f,'Upload process video');D.process_videos[+$('step').value]=path;await save('Update process video')}catch(e){msg(e.message,0)}}
+async function uploadCase(){try{let b=$('bf').files[0],a=$('af').files[0];if(!b||!a)throw Error('청소 전 사진과 청소 후 사진을 모두 선택해주세요.');let stamp=Date.now(),bp='media/before_after/'+stamp+'_before_'+clean(b.name),ap='media/before_after/'+stamp+'_after_'+clean(a.name);await putFile(bp,b,'Upload before photo');await putFile(ap,a,'Upload after photo');D.cases.unshift({before:bp,after:ap,category:$('cat').value,title:$('ct').value,note:$('cn').value,date:new Date().toISOString()});await save('Add before after case')}catch(e){msg(e.message,0)}}
+async function uploadGallery(){try{let f=$('mf').files[0];if(!f)throw Error('파일을 선택해주세요.');let path='media/gallery/'+Date.now()+'_'+clean(f.name);await putFile(path,f,'Upload gallery media');D.gallery.unshift({type:f.type.startsWith('video')?'video':'image',url:path,title:$('mt').value,caption:$('cap').value,date:new Date().toISOString()});await save('Add gallery item')}catch(e){msg(e.message,0)}}
+async function addPost(){try{D.posts.unshift({kind:$('pk').value,title:$('pt').value,body:$('pb').value,date:new Date().toISOString()});await save('Add post')}catch(e){msg(e.message,0)}}load();
 </script></body></html>
